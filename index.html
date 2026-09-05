@@ -361,11 +361,10 @@
       .book-grid.list-view .book-body { padding: 22px; }
       .book-grid.list-view .skeleton { display: grid; grid-template-columns: 155px minmax(0,1fr); min-height: 290px; }
       .book-grid.list-view .skeleton-cover { height: 100%; aspect-ratio: auto; }
-      /* Modal keeps side-by-side desktop layout */
+      /* Tablet modal: still side-by-side but tighter */
       .book-modal { width: min(680px, calc(100% - 24px)); }
-      .modal-panel { display: grid; grid-template-columns: 220px minmax(0,1fr); max-height: min(760px, calc(100vh - 24px)); overflow: hidden; }
-      .modal-cover-wrap { min-height: 0; height: auto; }
-      .modal-content { padding: 40px 28px 32px; overflow-y: auto; }
+      .modal-panel { grid-template-columns: 220px minmax(0,1fr); }
+      .modal-content { padding: 40px 28px 32px; }
       .modal-title { font-size: 34px; }
       .pagination-wrap { align-items: stretch; flex-direction: column; }
       .pagination-summary { text-align: center; }
@@ -439,20 +438,150 @@
       .book-grid.list-view .download-button { min-height: 39px; padding-inline: 11px; font-size: 10px; }
       .book-grid.list-view .skeleton { min-height: 255px; display: grid; grid-template-columns: 112px minmax(0,1fr); }
       .book-grid.list-view .skeleton-cover { height: 100%; aspect-ratio: auto; }
-      /* Details modal — same side-by-side layout as desktop */
-      .book-modal { width: calc(100% - 16px); max-height: calc(100vh - 16px); border-radius: 22px; }
-      .modal-panel {
-        display: grid;
-        grid-template-columns: minmax(120px, 38%) minmax(0, 1fr);
-        max-height: calc(100vh - 16px);
+      /* Details modal — polished mobile sheet */
+      .book-modal {
+        width: calc(100% - 12px);
+        max-height: calc(100vh - 12px);
+        border-radius: 20px;
         overflow: hidden;
       }
-      .modal-cover-wrap { min-height: 0; height: auto; align-self: stretch; }
-      .modal-content { overflow-y: auto; padding: 36px 18px 28px; }
-      .modal-title { padding-right: 28px; font-size: clamp(26px, 7vw, 34px); }
-      .modal-close { top: 11px; right: 11px; }
-      .modal-actions { display: flex; align-items: center; flex-direction: row; gap: 8px; }
-      .modal-favorite, .modal-download { width: auto; flex: 1; min-height: 44px; }
+      .modal-panel {
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100vh - 12px);
+        overflow: hidden;
+      }
+      /* Classic book cover: portrait 2:3, centered like a real book */
+      .modal-cover-wrap {
+        position: relative;
+        flex: 0 0 auto;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 28px 48px 8px;
+        background: linear-gradient(165deg, #2c282a 0%, #161314 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .modal-cover {
+        position: relative;
+        z-index: 1;
+        width: auto;
+        height: min(42vh, 320px);
+        max-width: min(72%, 220px);
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 3px 10px 10px 3px;
+        box-shadow:
+          0 1px 0 rgba(255,255,255,.12) inset,
+          -4px 0 12px rgba(0,0,0,.25),
+          0 18px 40px rgba(0,0,0,.45);
+      }
+      .modal-cover-wrap .cover-fallback {
+        width: min(72%, 220px);
+        height: min(42vh, 320px);
+        aspect-ratio: 2 / 3;
+        border-radius: 3px 10px 10px 3px;
+        font-size: 42px;
+        opacity: .5;
+      }
+      .modal-content {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px 18px 12px;
+        display: flex;
+        flex-direction: column;
+      }
+      .modal-genre {
+        margin-bottom: 10px;
+        font-size: 9px;
+        padding: 6px 9px;
+      }
+      .modal-title {
+        padding-right: 0;
+        font-size: clamp(26px, 7.5vw, 34px);
+        line-height: 1.1;
+        letter-spacing: -.03em;
+      }
+      .modal-author {
+        margin-top: 8px;
+        font-size: 14px;
+      }
+      .modal-meta {
+        margin-top: 14px;
+        gap: 6px;
+      }
+      .modal-meta span {
+        padding: 6px 9px;
+        font-size: 10.5px;
+        border-radius: 8px;
+      }
+      .modal-description {
+        margin-top: 16px;
+        margin-bottom: 8px;
+        font-size: 14.5px;
+        line-height: 1.7;
+        flex: 1 1 auto;
+      }
+      .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        background: rgba(20, 18, 14, .6);
+        border: 1px solid rgba(255, 255, 255, .28);
+        color: #fff;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+      }
+      /* Sticky action bar — always reachable even with long blurbs */
+      .modal-actions {
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        gap: 8px;
+        margin-top: auto;
+        margin-inline: -18px;
+        margin-bottom: -12px;
+        padding: 14px 18px calc(14px + env(safe-area-inset-bottom, 0px));
+        border-top: 1px solid var(--line);
+        background: var(--surface);
+        box-shadow: 0 -8px 24px rgba(20, 18, 14, .06);
+      }
+      .modal-favorite {
+        flex: 0 0 auto;
+        width: 48px;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 0;
+        font-size: 18px;
+        gap: 0;
+      }
+      /* Hide "Save to reading list" text — heart only on mobile */
+      .modal-favorite span:last-child {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .modal-download {
+        flex: 1 1 auto;
+        width: auto;
+        min-height: 48px;
+        font-size: 13px;
+      }
       /* Full pagination like desktop */
       .pagination { gap: 6px; flex-wrap: wrap; justify-content: center; }
       .page-button.nav-word { max-width: none; min-height: 40px; }
@@ -473,10 +602,27 @@
       .book-grid.list-view .book-actions { flex-direction: row; }
       .book-grid.list-view .card-action-group { width: auto; }
       .book-grid.list-view .details-button { flex: 0 0 auto; }
-      /* Keep modal side-by-side even on tiny screens */
-      .modal-panel { grid-template-columns: minmax(100px, 36%) minmax(0, 1fr); }
-      .modal-content { padding: 28px 14px 22px; }
+      .modal-cover-wrap {
+        padding: 22px 36px 6px;
+      }
+      .modal-cover {
+        height: min(38vh, 280px);
+        max-width: min(78%, 200px);
+      }
+      .modal-cover-wrap .cover-fallback {
+        height: min(38vh, 280px);
+        width: min(78%, 200px);
+      }
+      .modal-content { padding: 16px 14px 10px; }
       .modal-title { font-size: 24px; }
+      .modal-actions {
+        margin-inline: -14px;
+        margin-bottom: -10px;
+        padding: 12px 14px calc(12px + env(safe-area-inset-bottom, 0px));
+        gap: 7px;
+      }
+      .modal-favorite { width: 46px; min-width: 46px; min-height: 46px; padding: 0; }
+      .modal-download { min-height: 46px; font-size: 12px; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
