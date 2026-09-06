@@ -1783,7 +1783,18 @@
   },
   {
     "id": 173,
-    "title": "Pucking Ever After",
+    "title": "Pucking Ever After Volume 1",
+    "author": "Emily Rath",
+    "genre": "Contemporary Romance",
+    "description": "Full of spice, laughter, and so much love.",
+    "year": 2024,
+    "pages": 480,
+    "coverImage": "COVER_173",
+    "downloadLink": "DOWNLOAD_173"
+  },
+  {
+    "id": 165,
+    "title": "Pucking Ever After Volume 2",
     "author": "Emily Rath",
     "genre": "Contemporary Romance",
     "description": "The steamy continuation of a high-heat hockey romance.",
@@ -1824,17 +1835,6 @@
     "pages": 420,
     "coverImage": "COVER_176",
     "downloadLink": "DOWNLOAD_176"
-  },
-  {
-    "id": 177,
-    "title": "Where Dark Things Dwell",
-    "author": "H.D. Carlton",
-    "genre": "Dark Romance",
-    "description": "Obsession and danger intertwine in this dark and atmospheric story.",
-    "year": 2024,
-    "pages": 450,
-    "coverImage": "COVER_177",
-    "downloadLink": "DOWNLOAD_177"
   },
   {
     "id": 178,
@@ -1881,28 +1881,6 @@
     "downloadLink": "DOWNLOAD_181"
   },
   {
-    "id": 182,
-    "title": "Dark Notes",
-    "author": "J.T. Geissinger",
-    "genre": "Dark Romance",
-    "description": "A classical musician and a dangerous man collide in a story of power and desire.",
-    "year": 2018,
-    "pages": 400,
-    "coverImage": "COVER_182",
-    "downloadLink": "DOWNLOAD_182"
-  },
-  {
-    "id": 183,
-    "title": "Sweet Ruin",
-    "author": "J.T. Geissinger",
-    "genre": "Dark Romance",
-    "description": "Ruin and redemption mix with intense erotic tension.",
-    "year": 2019,
-    "pages": 420,
-    "coverImage": "COVER_183",
-    "downloadLink": "DOWNLOAD_183"
-  },
-  {
     "id": 184,
     "title": "Ruthless Creatures",
     "author": "J.T. Geissinger",
@@ -1923,39 +1901,6 @@
     "pages": 300,
     "coverImage": "COVER_185",
     "downloadLink": "DOWNLOAD_185"
-  },
-  {
-    "id": 186,
-    "title": "Own Me",
-    "author": "Ryan Michele",
-    "genre": "Dark Romance",
-    "description": "Control and desire escalate in this dark romance.",
-    "year": 2015,
-    "pages": 320,
-    "coverImage": "COVER_186",
-    "downloadLink": "DOWNLOAD_186"
-  },
-  {
-    "id": 187,
-    "title": "King of Shadows",
-    "author": "Rina Kent",
-    "genre": "Dark Romance",
-    "description": "A dark mafia romance filled with power, secrets, and scorching tension.",
-    "year": 2020,
-    "pages": 380,
-    "coverImage": "COVER_187",
-    "downloadLink": "DOWNLOAD_187"
-  },
-  {
-    "id": 188,
-    "title": "Queen of Hearts",
-    "author": "Rina Kent",
-    "genre": "Dark Romance",
-    "description": "The continuation of a dangerous and addictive dark romance.",
-    "year": 2020,
-    "pages": 400,
-    "coverImage": "COVER_188",
-    "downloadLink": "DOWNLOAD_188"
   },
   {
     "id": 189,
