@@ -1981,36 +1981,14 @@
   },
   {
     "id": 201,
-    "title": "Destroy",
+    "title": "Destroyed",
     "author": "Pepper Winters",
     "genre": "Dark Romance",
     "description": "The intensity continues in this dark and consuming romance.",
     "year": 2017,
     "pages": 380,
-    "coverImage": "COVER_201",
+    "coverImage": "images3/book201.webp",
     "downloadLink": "DOWNLOAD_201"
-  },
-  {
-    "id": 202,
-    "title": "The Fox",
-    "author": "Rina Kent",
-    "genre": "Dark Romance",
-    "description": "A dark and twisted romance with dangerous power dynamics.",
-    "year": 2022,
-    "pages": 400,
-    "coverImage": "COVER_202",
-    "downloadLink": "DOWNLOAD_202"
-  },
-  {
-    "id": 203,
-    "title": "The Hound",
-    "author": "Rina Kent",
-    "genre": "Dark Romance",
-    "description": "Obsession and possession define this dark continuation.",
-    "year": 2022,
-    "pages": 420,
-    "coverImage": "COVER_203",
-    "downloadLink": "DOWNLOAD_203"
   },
   {
     "id": 204,
@@ -2020,7 +1998,7 @@
     "description": "A witch and a ruthless prince of hell collide in a spicy, dark romantasy.",
     "year": 2020,
     "pages": 448,
-    "coverImage": "COVER_204",
+    "coverImage": "images3/book204.webp",
     "downloadLink": "DOWNLOAD_204"
   },
   {
@@ -2031,7 +2009,7 @@
     "description": "The stakes and the heat rise in this dark fantasy romance.",
     "year": 2021,
     "pages": 448,
-    "coverImage": "COVER_205",
+    "coverImage": "images3/book205.webp",
     "downloadLink": "DOWNLOAD_205"
   },
   {
@@ -2042,7 +2020,7 @@
     "description": "The conclusion of a seductive and dangerous romantasy trilogy.",
     "year": 2022,
     "pages": 480,
-    "coverImage": "COVER_206",
+    "coverImage": "images3/book206.webp",
     "downloadLink": "DOWNLOAD_206"
   },
   {
@@ -2053,18 +2031,7 @@
     "description": "A fallen angel and a mortal woman navigate desire and danger in this spicy romantasy.",
     "year": 2023,
     "pages": 480,
-    "coverImage": "COVER_207",
+    "coverImage": "images3/book207.webp",
     "downloadLink": "DOWNLOAD_207"
   },
-  {
-    "id": 208,
-    "title": "Throne of the Doomed",
-    "author": "Kerri Maniscalco",
-    "genre": "Romantasy",
-    "description": "The dark and steamy continuation of a high-heat fantasy romance.",
-    "year": 2025,
-    "pages": 500,
-    "coverImage": "COVER_208",
-    "downloadLink": "DOWNLOAD_208"
-  }
 ]
